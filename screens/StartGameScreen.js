@@ -7,6 +7,7 @@ import {
   Button,
   Keyboard,
   Alert,
+  Dimensions,
 } from 'react-native'
 import Card from '../components/Card'
 import Input from '../components/input'
@@ -123,9 +124,11 @@ const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'space-between',
     paddingHorizontal: 15,
+    marginTop: Dimensions.get('window').height > 600 ? 20 : 10,
   },
   button: {
-    width: 100,
+    // width: 100,
+    width: Dimensions.get('window').width / 4,
   },
   summaryContainer: {
     marginTop: 20,
